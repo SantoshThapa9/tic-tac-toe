@@ -1,7 +1,7 @@
 {
   "short_name": "Tic Tac Toe",
-  "name": "Tic Tac Toe Game - Play Online",
-  "description": "Play Tic Tac Toe online for free! Challenge your friends in Player vs Player mode or test your skills against AI in easy and hard difficulties.",
+  "name": "Tic Tac Toe Game by Santosh Thapa",
+  "description": "Play Tic Tac Toe online for free! A modern game by Santosh Thapa featuring Player vs Player and AI modes with multiple difficulty levels.",
   "icons": [
     {
       "src": "favicon.ico",

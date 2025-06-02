@@ -1,12 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import homeStyle from "./Home.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInstagram,
-  faGithub,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {
   faSun,
   faMoon,
@@ -14,6 +10,7 @@ import {
   faVolumeHigh,
   faCog,
   faGamepad,
+  faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
 import clickSound from "../components/click.mp3";
 
@@ -37,9 +34,21 @@ const Home = () => {
     }
   });
 
+  const audioRef = useRef(new Audio(clickSound));
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, []);
+
   const playSound = () => {
     if (isSoundOn) {
-      new Audio(clickSound).play();
+      const audio = audioRef.current;
+      audio.currentTime = 0;
+      audio.play().catch((err) => console.error("Audio playback failed:", err));
     }
   };
 
@@ -159,9 +168,9 @@ const Home = () => {
         <button
           className={homeStyle.socialBtn}
           style={buttonStyle}
-          onClick={() => window.open("https://www.instagram.com/santoshh689")}
+          onClick={() => window.open("https://santosh-gamma.vercel.app/")}
         >
-          <FontAwesomeIcon icon={faInstagram} />
+          <FontAwesomeIcon icon={faGlobe} />
         </button>
         <button
           className={homeStyle.socialBtn}

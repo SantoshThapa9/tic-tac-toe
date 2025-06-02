@@ -2,14 +2,14 @@
   "name": "tic-tac-toe",
   "version": "0.1.0",
   "private": true,
-  "description": "A modern Tic Tac Toe game built with React featuring player vs player and AI modes with multiple difficulty levels",
+  "description": "A modern Tic Tac Toe game by Santosh Thapa, built with React featuring player vs player and AI modes with multiple difficulty levels",
   "author": {
     "name": "Santosh Thapa",
     "url": "https://santosh-gamma.vercel.app/"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SantoshThapa9/tictactoer"
+    "url": "https://github.com/SantoshThapa9/tic-tac-toe"
   },
   "keywords": [
     "tic-tac-toe",
